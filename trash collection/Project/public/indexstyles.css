@@ -1,0 +1,144 @@
+.myCards{
+    margin-top: 50px;
+}
+#payments{
+    width: 57%;
+    padding-top: 50px;
+    margin: auto;
+}
+
+#twentyfourbyseven{
+    width: 81%;
+    margin: auto;
+}
+
+#Heading{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 50px;
+    font-family: fantasy;
+    margin-bottom: 90px;
+    margin-top: 160px;
+}
+
+.fruits{
+    height: 211px;
+
+}
+#grains{
+    height: 211px;
+
+}
+.productsHeading{
+    margin-top: 160px !important;
+}
+
+.starbucks{
+    height: 152px;
+    width: 152px  !important;
+    margin-top: 26px;
+}
+
+.pizzahut{
+    margin-top: 33px;
+}
+
+.dominos{
+    height: 140px;
+    width: 140px  !important;
+    margin-top: 32px;
+    margin-left: 32px;
+}
+
+.mcDonalds{
+    margin-top: 44px;
+}
+
+.main-footer {
+    background-color: #343a40;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+    margin-left: 740px;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+
+#cr{
+    font-size: 1 rem;
+    font-family:'Ubuntu', sans-serif;
+    background-color: #4c4e50;
+    color:  white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.clients{
+    margin-bottom: 200px;
+}
+.aboutUs{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 250px;
+}
+
+.aboutUsContent{
+    width: 50%;
+    
+}
+.paymentCard{
+    margin-top: 54px;
+}
+
+.serviceCard{
+    margin-top: 11px;
+}
+
+.login{
+    width: 33%;
+    margin: auto;
+    margin-top: 136px;
+    background-color: #000000ba;
+    color: white;
+}
+
+.registerBody{
+    padding: 39px;
+}
+.registerForm{
+    margin: 15px 0px;
+}
+.register{
+    width: 33%;
+    margin: 100px auto;
+     background-color: #000000ba;
+    color: white;
+}
+.registerFullBody{
+    background-image: url("Images/registerbg.jfif") ;
+    
+  background-size: cover;
+    
+}
+
+.storeFullBody{
+    background-image: url("Images/storebg.jpg");
+}

@@ -1,0 +1,17 @@
+{
+    "music":[
+        {
+            "id":1,
+            "name":"Biodegradable",
+            "price":1500,
+            "imgName":"bio2.png"
+        },
+        {
+            "id":2,
+            "name":"Non - Biodegradable",
+            "price":3000,
+            "imgName":"nonbio.jpg"
+        }
+    ]
+    
+}

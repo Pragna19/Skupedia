@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GoGreen</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="indexstyles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <script src="trash.js" defer></script>
+        <script>
+            var stripePUBLICKey ='<%=stripePUBLICKey%>'
+        </script>
+    </head>
+    <div style="background: url()" class="page-holder bg-cover">
+    <body>
+        <!-- <img src="images/trashbg.jpg" class="img-fluid"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/index">GoGreen</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/trash">Trash Request</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">News</a>
+                  </li>
+               
+                
+              </ul>
+             
+            </div>
+          </nav>
+        <section class="container content-section">
+            <h2 class="section-header">Trash Request</h2>
+            <div class="shop-items">
+                <% items.music.forEach(function(item){%>
+                    <div class="shop-item"data-item-id="<%= item.id%>">
+                        <span class="shop-item-title"><%= item.name%></span>
+                        <img class="shop-item-image" src="Images/<%= item.imgName%>">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹<%= item.price/100 %>/100gm</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>   
+        </section>
+
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">WASTE TYPE</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">₹0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">DUMP</button>
+        </section>
+
+        <section class="container content-section">
+            <h2 class="section-header">LOCATION</h2>
+          <form action="/trash" method="POST">
+           
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+           
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" name="city" class="form-control" id="inputCity">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputCity">State</label>
+                <input type="text" name="state" class="form-control" id="inputState">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" name ="zip" class="form-control" id="inputZip">
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </section>
+
+
+       
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class=""> GoGreen Pvt. Ltd. </h3>
+               
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="Images/YouTube Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.spotify.com" target="_blank">
+                            <img src="Images/Spotify Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="Images/Facebook Logo.png">
+                        </a>
+                    </li>
+                </ul>
+               
+            </div>
+            <div id="cr">
+    
+                Copyright ©2021 All rights reserved
+            </div>
+           
+        </footer>
+    </body>
+</div>
+</html>
